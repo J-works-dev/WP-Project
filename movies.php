@@ -8,33 +8,62 @@
     <body>
         <div class="content">
             <div class="title">
-                <a href="index.php">SMT Movie Rental</a>
+                <a href="index.php"><img src="SMTlogo.png"></a>
             </div>
             <ul class="nav">
                 <li class="nav-index"><a href="index.php">HOT 50</a></li>
                 <li class="nav-index active"><a href="movies.php">Movies</a></li>
                 <li class="nav-index"><a href="loadMovies.php">Load Movies</a></li>
-                <!-- <li class="nav-index"><a href="activity2.php">Activity 2</a></li>
-                <li class="nav-index"><a href="activity3.php">Activity 3</a></li>
-                <li class="nav-index"><a href="activity4.php">Activity 4</a></li>
-                <li class="nav-index"><a href="activity5.php">Activity 5</a></li>
-                <li class="nav-index"><a href="activity6.php">Activity 6</a></li> -->
             </ul>
             <main>
                 <section>
-                    <h3>Hot 50s!!</h3>
-                    <article id="home"class="col-lg-12">
-                        <h3>Member List</h3>
+                    <h3>Search</h3>
+                    <article class="search">
                         <!-- <?php include 'hot50.php'; ?> -->
-                        <form action="getCSV.php" enctype="multipart/form-data" method="post" role="form">
+                        <form class="search-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                             <div class="form-group">
-                                <label for="exampleInputFile">File Upload</label>
-                                <input type="file" name="file" id="file" size="200000">
-                                <p class="help-block">Only Excel/CSV File Import.</p>
+                                <label for="title">Title</label>
+                                <input type="title" class="form-control" id="title" name="title">
                             </div>
-                            <button type="submit" class="btn btn-default" name="submit" value="submit">Upload</button>
+                            <div class="form-group">
+                                <label for="genre">Genre</label>
+                                <input list="genre" class="form-control" id="genre" name="genre">
+                                <datalist id="genre">
+                                    <?php include 'optGenre_scr.php'; ?>
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <label for="rating">Rating</label>
+                                <input list="rating" class="form-control" id="rating" name="rating">
+                                <datalist id="rating">
+                                    <?php include 'optRating_scr.php'; ?>
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Year</label>
+                                <input list="year" class="form-control" id="year" name="year">
+                                <datalist id="year">
+                                    <?php include 'optYear_scr.php'; ?>
+                                </datalist>
+                            </div>
+                            <button type="submit" class="btn btn-default" name="submit" value="submit">Search</button>
                         </form>
-                        <?php include 'getCSV.php'; ?>
+                    </article>
+                </section>
+                <section>
+                    <h3>Movie List</h3>
+                    <article>
+                        <?php
+                            include 'listMovies_scr.php';
+                            // if (!(isset($_POST["submit"])))
+                            // {
+                            //     include 'listMovies_scr.php?page=92';
+                            // }
+                            // else
+                            // {
+                            //     include 'listMovies_scr.php?page=1';
+                            // }
+                        ?>
                     </article>
                 </section>
             </main>
