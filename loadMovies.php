@@ -11,9 +11,9 @@
                 <a href="index.php">SMT Movie Rental</a>
             </div>
             <ul class="nav">
-                <li class="nav-index active"><a href="index.php">HOT 50</a></li>
+                <li class="nav-index"><a href="index.php">HOT 50</a></li>
                 <li class="nav-index"><a href="movies.php">Movies</a></li>
-                <li class="nav-index"><a href="loadMovies.php">Load Movies</a></li>
+                <li class="nav-index active"><a href="loadMovies.php">Load Movies</a></li>
                 <!-- <li class="nav-index"><a href="activity2.php">Activity 2</a></li>
                 <li class="nav-index"><a href="activity3.php">Activity 3</a></li>
                 <li class="nav-index"><a href="activity4.php">Activity 4</a></li>
@@ -22,9 +22,10 @@
             </ul>
             <main>
                 <section>
-                    <h3>Hot 50s!!</h3>
                     <article id="home"class="col-lg-12">
-                        <?php include 'hot50.php'; ?>
+                        <form action="getCSV.php" enctype="multipart/form-data" method="post" role="form">
+                            <button type="submit" class="btn btn-default" name="submit" value="submit">Load Movies</button>
+                        </form>
                     </article>
                 </section>
             </main>

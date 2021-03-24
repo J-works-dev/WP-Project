@@ -5,46 +5,76 @@ body {
 }
 
 .content {
+    position: relative;
     max-width: 700px;
-    height: 100%;
+    min-height: 600px;
     margin: auto;
     background-color: rgb(228, 228, 228);
-    padding: 30px;
+    padding: 20px;
 }
+
+.footer a {
+    text-decoration: none;
+}
+.footer {
+    position: absolute;
+    width: 95%;
+    text-align: center;
+    color: gray;
+    font-size: 12px;
+    bottom: 10px;
+    padding: 0;
+}
+
 
 a {
     text-decoration: none;
 }
 
-.title a {
-    color: rgb(75, 90, 85);
+.title {
+    color: rgb(54, 55, 61);
+    font-family: "calibri";
     font-size: 32px;
-    margin-left: auto;
+    text-align: center;
 }
 
 h2 {
-    color: rgb(75, 90, 85);
+    color: rgb(54, 55, 61);
     font-size: 32px;
     margin-left: 10px;
 }
 
 h3 {
-    color: rgb(103, 124, 122);
+    color: rgb(54, 55, 61);
     font-size: 26px;
     margin-left: 10px;
 }
 
-/* .nav {
+.nav {
+    display: flex;
+    /* justify-content: space-between; */
     list-style-type: none;
-    background-color:rgb(42, 190, 158);
-    padding: 18px 22px;
+    background-color:rgb(57, 64, 95);
+    padding: 10px;
     font-family: "calibri";
     font-size: 20px;
+}
+/* .nav-left, .nav-right {
+    display: inline;
+} */
+
+.nav li:last-child {
+    position: absolute;
+    background-color: red;
+    /* justify-content: space-between; */
+    right: 10px;
+    opacity: 50%;
+    /* margin-right: 10px; */
 }
 
 .nav-index {
     display: inline;
-    padding: 18px 22px;
+    padding: 10px;
 }
 
 .nav-index a {
@@ -54,14 +84,14 @@ h3 {
 }
 
 .active {
-    background-color:rgb(36, 163, 136);
+    background-color:rgb(42, 45, 61);
 } 
 
 .nav-index > a:hover {
     color: rgb(28, 117, 98);
 }
 
-main {
+/* main {
     align-items: center;
     margin-top: 50px;
     margin-left: 100px;
