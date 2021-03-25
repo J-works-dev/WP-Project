@@ -13,6 +13,7 @@
             <ul class="nav">
                 <li class="nav-index active"><a href="index.php">HOT 50</a></li>
                 <li class="nav-index"><a href="movies.php">Movies</a></li>
+                <li class="nav-index"><a href="top10.php">Top 10</a></li>
                 <li class="nav-index"><a href="loadMovies.php">Load Movies</a></li>
             </ul>
             <main>

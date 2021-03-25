@@ -27,7 +27,7 @@
                 }
                 else
                 {
-                    $rnd = rand(0, 1000);
+                    $rnd = rand(0, 10000);
                     array_push($row, $rnd); // add random Number for temp searching value
                     
                     addslashes($row[1]);

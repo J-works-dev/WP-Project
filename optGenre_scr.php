@@ -1,16 +1,18 @@
 <?php
     require("connect.php");
     $sql = "SELECT Genre
-            FROM movies";
+            FROM movies
+            ORDER BY Genre;";
     $result = $pdo->query($sql);
-
-    if ($result->rowcount() > 0) {
-        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            $genre = $row["Genre"];
-            echo "<option value=\"$genre\"></option>";
-        }
-    } else {
-        echo "0 results";
+    
+    $array = array();
+    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        array_push($array, $row["Genre"]);
     }
-    $conn->close();
+    $array = array_unique($array);
+    foreach($array as $genre) {
+        echo "<option value=\"$genre\"></option>";
+    }
+    
+    $pdo = null;
 ?>

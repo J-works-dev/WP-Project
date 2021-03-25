@@ -57,14 +57,7 @@
                     <h3>Movie List</h3>
                     <article>
                         <?php
-                            if (!(isset($_POST["submit"])) && !isset($_COOKIE['search']))
-                            {
-                                include 'listMovies_scr.php';
-                            }
-                            else
-                            {
                                 include 'searchMovies_scr.php';
-                            }
                         ?>
                     </article>
                 </section>

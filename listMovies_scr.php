@@ -5,59 +5,7 @@
     $total_pages = 0;
     $result_per_page = 25;
 
-    if (isset($_POST["submit"]))
-    {
-        $s_title = $_POST["title"];
-        $s_genre = $_POST["genre"];
-        $s_rating = $_POST["rating"];
-        $s_year = $_POST["year"];
-
-        if (!empty($s_genre) && !empty($s_rating) && !empty($s_year))
-        {
-            $sql = "SELECT * FROM movies
-                WHERE Genre = '$s_genre' AND Rating = '$s_rating' AND Year = '$s_year';";
-        }
-        elseif (empty($s_genre) && !empty($s_rating) && !empty($s_year))
-        {
-            $sql = "SELECT * FROM movies
-                WHERE Rating = '$s_rating' AND Year = '$s_year';";
-        }
-        elseif (!empty($s_genre) && empty($s_rating) && !empty($s_year))
-        {
-            $sql = "SELECT * FROM movies
-                WHERE Genre = '$s_genre' AND Year = '$s_year';";
-        }
-        elseif (!empty($s_genre) && !empty($s_rating) && empty($s_year))
-        {
-            $sql = "SELECT * FROM movies
-                WHERE Genre = '$s_genre' AND Rating = '$s_rating';";
-        }
-        elseif (empty($s_genre) && empty($s_rating) && !empty($s_year))
-        {
-            $sql = "SELECT * FROM movies
-                WHERE Year = '$s_year';";
-        }
-        elseif (empty($s_genre) && !empty($s_rating) && empty($s_year))
-        {
-            $sql = "SELECT * FROM movies
-                WHERE Rating = '$s_rating';";
-        }
-        elseif (!empty($s_genre) && empty($s_rating) && empty($s_year))
-        {
-            $sql = "SELECT * FROM movies
-                WHERE AND Genre = '$s_genre';";
-        }
-        else
-        {
-            $sql = "SELECT * FROM movies
-                WHERE Title = '$s_title';";
-        }
-    }
-    else
-    {
-        $sql = "SELECT * FROM movies";
-    }
-    
+    $sql = "SELECT * FROM movies";
     $result = $pdo->query($sql);
 
     if ($result->rowcount() > 0) {

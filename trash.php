@@ -73,3 +73,27 @@
     </form>
     <!-- <?php include 'getCSV.php'; ?> -->
 ?>
+
+// JS variable setting
+// const num1 = parseInt("<?php echo $num1; ?>");
+// const num2 = parseInt("<?php echo $num2; ?>");
+// const num3 = parseInt("<?php echo $num3; ?>");
+// const num4 = parseInt("<?php echo $num4; ?>");
+// const num5 = parseInt("<?php echo $num5; ?>");
+// const num6 = parseInt("<?php echo $num6; ?>");
+// const num7 = parseInt("<?php echo $num7; ?>");
+// const num8 = parseInt("<?php echo $num8; ?>");
+// const num9 = parseInt("<?php echo $num9; ?>");
+// const num10 = parseInt("<?php echo $num10; ?>");
+
+// { y: num1, label: "No 1" },
+// { y: num2,  label: "No 2" },
+// { y: num3,  label: "No 3" },
+// { y: num4,  label: "No 4" },
+// { y: num5,  label: "No 5" },
+// { y: num6, label: "No 6" },
+// { y: num7,  label: "No 7" },
+// { y: num8, label: "No 8" },
+// { y: num9,  label: "No 9" },
+// { y: num10,  label: "No 10" }
+
