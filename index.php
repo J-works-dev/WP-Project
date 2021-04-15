@@ -20,7 +20,7 @@
                 <section>
                     <h3>Hot 50s!!</h3>
                     <article>
-                        <?php include 'hot50.php'; ?>
+                        <?php require 'hot50.php'; ?>
                     </article>
                 </section>
                 <div class="footer">
